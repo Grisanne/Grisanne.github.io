@@ -1,65 +1,57 @@
-/* styles.css */
+* {
+    font-family: arial;
+    font-weight: bold;
+}
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
+    background: black;
 }
-
 .container {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
+    margin: auto;
+    width: 60vw;
+    background: grey;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
 }
-
 button {
-  padding: 0.5rem 1rem;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 1rem;
+    border: solid;
+    border-radius: 1em;
+    padding: 1em;
+    font-size: 1em;
+    margin-bottom: 1em;
 }
-
+button.male:hover {
+    background: deepskyblue;
+    border-color: lightskyblue;
+}
+button.female:hover {
+    background: hotpink;
+    border-color: lightpink;
+}
+button.mixed:hover {
+    background: goldenrod;
+    border-color: palegoldenrod;
+}
 .male {
-  background: lightskyblue;
+    background: lightskyblue;
+    border-color: deepskyblue;
 }
-
 .female {
-  background: lightpink;
+    background: lightpink;
+    border-color: hotpink;
 }
-
 .mixed {
-  background: springgreen;
+    background: palegoldenrod;
+    border-color: goldenrod;
 }
-
-button:hover {
-  background: #0056b3;
-}
-
 ul {
   list-style-type: none;
-  padding: 0;
+  padding: 1em;
+  background: dimgray;
+  border-radius: 1em;
+  width: 30vw;
+  margin: auto;
 }
-
 li {
   margin: 0.3rem 0;
-}
-/* Add to styles.css or update the existing button styling */
-
-.buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-button {
-  padding: 0.5rem 1.2rem;
-  font-weight: bold;
 }
