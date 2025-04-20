@@ -50,3 +50,38 @@ function generateNames(type) {
     nameList.appendChild(li);
   });
 }
+const houseNames = {
+  erdwing: [
+    "Thalmorren", "Bytide", "Anchor", "Gullwing", "Drift", "Fisher", "Burgess", "Dunsley", "Harroway", "Loxe", "Bramwell", "Goldyng", "Pearle", "Glimmercrest", "Porter", "Reefe", "Brightharbor", "Westmore", "Westerly", "Wyrmwind", "Sand", "Hawke", "Cliffrock", "Greymist", "Wader", "Salt", "Marlowe", "Ashcombe", "Hargrave", "Wycliffe", "Fairhaven", "Colton", "Bauble", "Highwater", "Wyrmport", "Dawne", "Crabber", "Petrel", "Darkwater", "Tidecall", "Coral", "Windrake", "Erdborn"
+  ],
+  bloodmire: [
+    "Drevant", "Weir", "Gloame", "Hallow", "Mourne", "Redclay", "Drakefang", "Wisp", "Bogwarden", "Graven", "Mirelight", "Fenmark", "Morgrave", "Wyrdwell", "Barrowmere", "Feld", "Crypt", "Morwyn", "Vyper", "Gloomlily", "Emberfen", "Vrydan", "Ashe", "Erdborn"
+  ],
+  wyrmspine: [
+    "Clyfford", "Stormrest-Clyfford", "Hewn", "Veyric", "Shale", "Highquarry", "Veyne", "Stonewake", "Stormsong", "Payne", "Gravell", "Cairn", "Skelwyn", "Keffard", "Oldknoll", "Dustey", "Foothold", "Holm", "Wyvernrest", "Wyrmforge", "Ironhart", "Blackslag", "Anvilmight", "Emberbright", "Erdborn"
+  ],
+  dragonfell: [
+    "Duske", "Wyld", "Wulf", "Hare", "Holloway", "Ashwick", "Kindling", "Hearth", "Firelight", "Ardlain", "Corvane", "Sylverbark", "Blackthorne", "Crayden", "Kellen", "Drelwyn", "Duskenbridge-Duske", "Grey", "Fell", "Caldreth", "Stane", "Harwood", "Hart", "Fallow", "Wyrmwood", "Cedar", "Briarwood", "Stagg", "Pine", "Oakes", "Pell", "Fenwell", "Greymead", "Callanwright", "Vecke", "Grymme", "Erdborn"
+  ],
+  reach: [
+    "Bloodwyne", "Rosehip", "Ferrowine", "Grapeleaf", "Blushvine", "Cress", "Veralle", "Redwyne", "Oxley", "Grainger", "Stonewell", "Hart", "Mutton", "Meadows", "Vintmere-Bloodwyne", "Barrel", "Roselane", "Cask", "Berryburr", "Vintwell", "Trellis", "Redfield", "Dunsworth", "Garland", "Poppyfield", "Lavender", "Marigold", "Foxglove", "Rosewood", "Appleton", "Crabapple", "Orchard", "Pippin", "Harveston", "Cyder", "Whitevine-Bloodwyne", "Summerbottle", "Sunfield", "Honeywyne", "Brightwater", "Silverbrook", "Fair", "Goldswell", "Blake", "Swan", "Dove", "Lark", "Kestrel", "Erdborn"
+  ]
+};
+
+function generateHouses(region) {
+  const resultArea = document.getElementById("house-name-result");
+  resultArea.innerHTML = ""; // Clear previous results
+  const names = houseNames[region];
+  const chosen = [];
+
+  while (chosen.length < 10 && names.length > 0) {
+    const name = names[Math.floor(Math.random() * names.length)];
+    if (!chosen.includes(name)) chosen.push(name);
+  }
+
+  chosen.forEach(name => {
+    const li = document.createElement("li");
+    li.textContent = "House " + name;
+    resultArea.appendChild(li);
+  });
+}
