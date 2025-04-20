@@ -39,3 +39,16 @@ ul {
 li {
   margin: 0.3rem 0;
 }
+/* Add to styles.css or update the existing button styling */
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+}
