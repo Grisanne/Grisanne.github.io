@@ -6,7 +6,7 @@ body {
     background: black;
 }
 .container {
-    margin: auto;
+    margin: 2em auto;
     width: 60vw;
     background: grey;
     text-align: center;
@@ -44,6 +44,51 @@ button.mixed:hover {
     background: palegoldenrod;
     border-color: goldenrod;
 }
+button.erdwing {
+    background: lightseagreen;
+    border-color: teal;
+}
+button.erdwing:hover {
+    background: teal;
+    border-color: lightseagreen;
+}
+
+button.bloodmire {
+    background: mediumvioletred;
+    border-color: plum;
+}
+button.bloodmire:hover {
+    background: plum;
+    border-color: mediumvioletred;
+}
+
+button.wyrmspine {
+    background: slategrey;
+    border-color: lightsteelblue;
+}
+button.wyrmspine:hover {
+    background: lightsteelblue;
+    border-color: slategrey;
+}
+
+button.dragonfell {
+    background: darkolivegreen;
+    border-color: yellowgreen;
+}
+button.dragonfell:hover {
+    background: yellowgreen;
+    border-color: darkolivegreen;
+}
+
+button.reach {
+    background: peru;
+    border-color: moccasin;
+}
+button.reach:hover {
+    background: moccasin;
+    border-color: peru;
+}
+
 ul {
   list-style-type: none;
   padding: 1em;
