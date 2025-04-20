@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Name Randomizer</title>
+  <title>Gendered Name Randomizer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container">
     <h1>Random Name Generator</h1>
-    <button onclick="generateNames()">Generate Names</button>
+    <div class="buttons">
+      <button onclick="generateNames('male')">Male Names</button>
+      <button onclick="generateNames('female')">Female Names</button>
+      <button onclick="generateNames('mixed')">Mixed</button>
+    </div>
     <ul id="nameList"></ul>
   </div>
 
