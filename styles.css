@@ -1,103 +1,86 @@
-/* This is a single-line comment */
+/* Global Reset */
 * {
-    font-family: arial;
-    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-    background: black;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #333;
 }
+
 .container {
-    margin: 2em auto;
-    width: 60vw;
-    background: grey;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
     text-align: center;
-    padding: 1em;
-    border-radius: 1em;
+    margin-bottom: 20px;
 }
+
 button {
-    border: solid;
-    border-radius: 1em;
-    padding: 1em;
-    font-size: 1em;
-    margin-bottom: 1em;
-}
-button.male:hover {
-    background: deepskyblue;
-    border-color: lightskyblue;
-}
-button.female:hover {
-    background: hotpink;
-    border-color: lightpink;
-}
-button.mixed:hover {
-    background: goldenrod;
-    border-color: palegoldenrod;
-}
-.male {
-    background: lightskyblue;
-    border-color: deepskyblue;
-}
-.female {
-    background: lightpink;
-    border-color: hotpink;
-}
-.mixed {
-    background: palegoldenrod;
-    border-color: goldenrod;
-}
-button.erdwing {
-    background: lightseagreen;
-    border-color: teal;
-}
-button.erdwing:hover {
-    background: teal;
-    border-color: lightseagreen;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-button.bloodmire {
-    background: mediumvioletred;
-    border-color: plum;
-}
-button.bloodmire:hover {
-    background: plum;
-    border-color: mediumvioletred;
+button:hover {
+    background-color: #3f4b93;
 }
 
-button.wyrmspine {
-    background: slategrey;
-    border-color: lightsteelblue;
-}
-button.wyrmspine:hover {
-    background: lightsteelblue;
-    border-color: slategrey;
+button.genderButton {
+    width: 48%;
+    margin: 5px;
+    background-color: #4caf50;
 }
 
-button.dragonfell {
-    background: darkolivegreen;
-    border-color: yellowgreen;
-}
-button.dragonfell:hover {
-    background: yellowgreen;
-    border-color: darkolivegreen;
+button.genderButton:hover {
+    background-color: #45a049;
 }
 
-button.reach {
-    background: peru;
-    border-color: moccasin;
-}
-button.reach:hover {
-    background: moccasin;
-    border-color: peru;
+label {
+    font-size: 16px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 1em;
-  background: dimgray;
-  border-radius: 1em;
-  width: 30vw;
-  margin: auto;
+/* Make checkboxes appear side by side using Flexbox */
+#checkboxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
 }
-li {
-  margin: 0.3rem 0;
+
+#checkboxContainer label {
+    font-size: 16px;
+    width: auto;
+}
+
+/* Style for results */
+#results {
+    margin-top: 20px;
+}
+
+.category {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.names {
+    margin-top: 5px;
+    list-style-type: none;
 }
