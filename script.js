@@ -72,23 +72,31 @@ function generateNames() {
     const nameCount = 10; // Generate 10 names
     let namesGenerated = 0;
 
+    // Add universal names automatically to the name pool
+    const universalNames = regionNames.universal;
+    const firstNamesUniversal = universalNames[selectedGender];
+    const lastNamesUniversal = universalNames.last;
+
     // Generate names
     while (namesGenerated < nameCount) {
         selectedRegions.forEach(region => {
             const regionData = regionNames[region];
-            const firstNames = regionData[selectedGender] || regionNames.universal[selectedGender];
-            const lastNames = regionData.last || regionNames.universal.last;
+            const firstNames = regionData[selectedGender] || [];
+            const lastNames = regionData.last || [];
 
-            const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-            const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+            // Ensure that each generated name includes universal names
+            if (firstNames.length || lastNames.length) {
+                const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)] || firstNamesUniversal[Math.floor(Math.random() * firstNamesUniversal.length)];
+                const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)] || lastNamesUniversal[Math.floor(Math.random() * lastNamesUniversal.length)];
 
-            const name = `${randomFirstName} ${randomLastName}`;
-            const nameItem = document.createElement('p');
-            nameItem.textContent = name;
-            resultsContainer.appendChild(nameItem);
+                const name = `${randomFirstName} ${randomLastName}`;
+                const nameItem = document.createElement('p');
+                nameItem.textContent = name;
+                resultsContainer.appendChild(nameItem);
 
-            namesGenerated++;
-            if (namesGenerated >= nameCount) return;
+                namesGenerated++;
+                if (namesGenerated >= nameCount) return;
+            }
         });
     }
 }
