@@ -1,4 +1,4 @@
-// Sample names for each region (just a placeholder, you can modify these)
+// Sample names for each region (just a placeholder, you can modify these) 
 const regionNames = {
     region1: {
         male: ["Aelric", "Aenor", "Aeslan", "Aethan", "Albert", "Alester", "Alfred", "Ambrose", "Amory", "Cassius", "Castor", "Elias", "Geoffrey", "Gyles", "Ignys", "Isador", "Leander", "Lucian", "Lysander", "Oberon", "Osric", "Peregryn", "Quentyn", "Reynard", "Sylvester", "Symeon", "Symon", "Theon", "Tobias", "Ulric", "Varron", "Vesper"],
