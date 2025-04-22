@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name Generator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Name Generator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Thalmorren Name Generator</h1>
+  <div class="container">
+    <h1>Thalmorren Name Generator</h1>
+    
+    <label for="first-name-gender">First Name Gender:</label>
+    <select id="first-name-gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Mixed">Mixed</option>
+    </select>
 
-        <!-- Gender Buttons -->
-        <button class="genderButton" id="maleButton">Male</button>
-        <button class="genderButton" id="femaleButton">Female</button>
+    <label for="culture">Culture (only affects Female first names):</label>
+    <select id="culture">
+      <option value="Oldblood">Oldblood</option>
+      <option value="Blessed">Blessed</option>
+      <option value="Wyrmbound">Wyrmbound</option>
+      <option value="All">All</option>
+    </select>
 
-        <!-- Region Checkboxes -->
-        <div>
-            <p>Select Regions:</p>
-            <div id="checkboxContainer">
-                <label><input type="checkbox" id="region1" value="region1"> Erdwing Coast</label>
-                <label><input type="checkbox" id="region2" value="region2"> Dragonsblood Reach</label>
-                <label><input type="checkbox" id="region3" value="region3"> Dragonfell Weald</label>
-                <label><input type="checkbox" id="region4" value="region4"> Wyrmspine Mountains</label>
-                <label><input type="checkbox" id="region5" value="region5"> Bloodmire Marsh</label>
-            </div>
-        </div>
+    <label for="region">Last Name Region:</label>
+    <select id="region">
+      <option value="Erdwing">Erdwing</option>
+      <option value="Dragonfell">Dragonfell</option>
+      <option value="Dragonsblood">Dragonsblood</option>
+      <option value="Wyrmspine">Wyrmspine</option>
+      <option value="Bloodmire">Bloodmire</option>
+      <option value="All">All Regions</option>
+    </select>
 
-        <!-- Results Display -->
-        <div id="results"></div>
+    <button onclick="generateNames()">Generate Names</button>
+
+    <div id="name-results">
+      <h2>Generated Names:</h2>
+      <ul id="names-list"></ul>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
